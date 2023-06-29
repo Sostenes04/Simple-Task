@@ -1,0 +1,39 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{% static 'Css/bootstrap.css' %}">
+    <link rel="stylesheet" href="{% static 'Css/bootstrap.min.css' %}">
+    <link rel="stylesheet" href="{% static 'Css/style.css' %}">
+    <title>{% block title %} Base {% endblock title %}</title>
+</head>
+
+<body>
+    <div class="container">
+        <header class="d-flex flex-wrap justify-content-center py-3 mb-5 border-bottom bg-light">
+          <a href="/" class="d-flex align-items-center mb-3 mb-md-0 me-md-auto text-dark text-decoration-none">
+            <span class="fs-3">
+              <svg xmlns="http://www.w3.org/2000/svg" width="64" height="48" fill="currentColor" class="bi bi-check-lg" viewBox="0 0 16 16">
+                <path d="M12.736 3.97a.733.733 0 0 1 1.047 0c.286.289.29.756.01 1.05L7.88 12.01a.733.733 0 0 1-1.065.02L3.217 8.384a.757.757 0 0 1 0-1.06.733.733 0 0 1 1.047 0l3.052 3.093 5.4-6.425a.247.247 0 0 1 .02-.022Z"/>
+              </svg>
+            <i class="bi bi-check-lg">  My TO DO! </i>
+            </span>
+          </a>
+          <ul class="nav nav-pills">
+            <li class="nav-item"><a href="/" class="nav-link " aria-current="page">Home</a></li>
+            <li class="nav-item"><a href="#" class="nav-link">Users</a></li>
+            <li class="nav-item"><a href="#" class="nav-link">About</a></li>
+          </ul>
+        </header>
+      </div>
+    {% block content %}
+    {% endblock content %}
+
+      <footer class="footer mt-auto py-3 bg-dark">
+        <p class="text-center fs-3">Alm3ida To do!</p>
+    </footer>
+    
+  </body>
+</html>
